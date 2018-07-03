@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Stress') {
           steps {
-            sh 'echo "This is Perf Env"'
+            sh 'echo "This is Perf Env":exit 1'
             echo 'Stress environment'
           }
         }
